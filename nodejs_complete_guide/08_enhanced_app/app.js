@@ -26,7 +26,7 @@ app.get('/favicon.ico', (req, res) => res.status(204));
 // })
 
 app.use('/admin', adminRouter)
-app.use(shopRouter)
+app.use('/shop', shopRouter)
 
 app.use(errorPageController.getErrorPage)
 

@@ -5,8 +5,13 @@ const adminController = require('../controllers/admin')
 
 const router = express.Router()
 
+// /admin/add-product => GET
 router.get('/add-product', adminController.getAddProduct)
-router.post('/product', v.postAddProduct)
-router.get('/products')
+
+// /admin/product => POST
+router.post('/product', adminController.postAddProduct)
+
+// /admin/products => GET
+router.get('/products', adminController.getProducts)
 
 module.exports = router
